@@ -1155,9 +1155,9 @@ class eZContentOperationCollection
      *
      * @return array An array with operation status, always true
      */
-    static public function updateSection( $nodeID, $selectedSectionID )
+    static public function updateSection( $nodeID, $selectedSectionID, $updateSearchEngineIndexes )
     {
-        eZContentObjectTreeNode::assignSectionToSubTree( $nodeID, $selectedSectionID );
+        eZContentObjectTreeNode::assignSectionToSubTree( $nodeID, $selectedSectionID, false, $updateSearchEngineIndexes );
     }
 
     /**
